@@ -1,0 +1,45 @@
+{{ "<!-- Portfolio Grid Section -->" | safeHTML }}
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>{{ with .Site.Params.portfolio.title }}{{.}}{{end}}</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+
+        <div class="row">
+            {{ range $.Site.Data.projects }}
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal{{ .modalID }}" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/{{ .img }}" class="img-responsive">
+                </a>
+            </div>
+            {{ end }}
+        </div> 
+        
+        <!--
+    <div id="galleryherepls">
+        <img src="img/portfolio/HIVlarge.png"
+            alt="Title here"
+            title="HIV"
+            size=200
+            data-desc="some description"
+            data-category="image category here"
+            data-fullsrc="img/portfolio/HIVlarge.png"
+        />        
+        ...        
+        <img src="imgs/thumbnails/image42.jpg"
+            alt="Image"
+            data-desc="Example"
+            data-fullsrc="imgs/image42.jpg"
+        />
+    </div>
+    -->
+    </div>
+</section>
