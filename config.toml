@@ -3,7 +3,9 @@ baseurl = "http://my-awesome-site.com/"
 languageCode = "en-us"
 title = "Hugo Freelancer Theme"
 theme = "hugo-freelancer-theme"
-
+contentdir: "content"
+layoutdir: "layouts"
+publishdir: "public"
 
 [params]
 
